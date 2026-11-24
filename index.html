@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LumenDesk — The quiet operating system for independent studios</title>
+  <meta name="description" content="LumenDesk brings proposals, scope sign-off, client progress pages, weekly updates, and calm payment reminders into one legible workspace for independent developers and small studios.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="LumenDesk (Portfolio Concept)">
+  <meta name="theme-color" content="#F4EFE6">
+
+  <!-- Canonical URL: replace your-username and repo name before publishing -->
+  <link rel="canonical" href="https://your-username.github.io/lumendesk/">
+
+  <!-- Open Graph (replace canonical domain and swap og-cover.svg for a 1200x630 PNG for wider social support) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LumenDesk">
+  <meta property="og:title" content="LumenDesk — The quiet operating system for independent studios">
+  <meta property="og:description" content="Proposals, scope sign-off, client progress pages, and payment reminders in one calm workspace built for independent developers and 2–3 person studios.">
+  <meta property="og:url" content="https://your-username.github.io/lumendesk/">
+  <meta property="og:image" content="https://your-username.github.io/lumendesk/assets/og-cover.svg">
+  <meta property="og:image:alt" content="LumenDesk editorial cover showing a studio engagement ledger with locked scope and milestone progress">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LumenDesk — The quiet operating system for independent studios">
+  <meta name="twitter:description" content="Keep proposals, locked scope, client progress, and payment reminders in one calm studio ledger.">
+  <meta name="twitter:image" content="https://your-username.github.io/lumendesk/assets/og-cover.svg">
+
+  <!-- Favicon (relative path for GitHub Pages project sites) -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+  <!-- Google Fonts: Fraunces (editorial serif) + IBM Plex Sans & Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets (relative paths for project-site portability) -->
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <!-- Structured Data (Fictional Portfolio Concept) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://your-username.github.io/lumendesk/#organization",
+        "name": "LumenDesk",
+        "url": "https://your-username.github.io/lumendesk/",
+        "logo": "https://your-username.github.io/lumendesk/assets/logo.svg",
+        "description": "Fictional studio operations software created as a front-end portfolio showcase."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://your-username.github.io/lumendesk/#software",
+        "name": "LumenDesk",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://your-username.github.io/lumendesk/",
+        "description": "The quiet operating system for independent studios. Proposals, scope lock, client progress pages, weekly updates, and payment reminders in one workspace.",
+        "publisher": {
+          "@id": "https://your-username.github.io/lumendesk/#organization"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Starter",
+            "price": "19",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Studio",
+            "price": "49",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Office",
+            "price": "99",
+            "priceCurrency": "USD"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!--
+    ANALYTICS PLACEHOLDER (INACTIVE BY DEFAULT)
+    Fill in your GA4 Measurement ID (e.g. "G-XXXXXXXXXX") and/or Plausible domain
+    before going live. While both strings remain empty, js/main.js loads zero
+    third-party analytics scripts.
+  -->
+  <script>
+    window.__ANALYTICS__ = {
+      ga4: '',
+      plausibleDomain: ''
+    };
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- =======================================================================
+       1. Top Navigation
+       ======================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="LumenDesk home">
+        <img class="brand__mark" src="./assets/favicon.svg" alt="" width="32" height="32">
+        <span class="brand__name">LumenDesk</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="#problem">Why it exists</a></li>
+          <li><a class="site-nav__link" href="#features">Features</a></li>
+          <li><a class="site-nav__link" href="#how-it-works">How it works</a></li>
+          <li><a class="site-nav__link" href="#pricing">Pricing</a></li>
+          <li><a class="site-nav__link" href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="#contact">Get early access</a>
+      </div>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle__bars" aria-hidden="true">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </span>
+        <span>Menu</span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <div class="container">
+        <nav aria-label="Mobile navigation">
+          <ul class="mobile-menu__list">
+            <li>
+              <a class="mobile-menu__link" href="#problem">
+                <span>Why it exists</span>
+                <span class="mobile-menu__index">01</span>
+              </a>
+            </li>
+            <li>
+              <a class="mobile-menu__link" href="#features">
+                <span>Features</span>
+                <span class="mobile-menu__index">02</span>
+              </a>
+            </li>
+            <li>
+              <a class="mobile-menu__link" href="#how-it-works">
+                <span>How it works</span>
+                <span class="mobile-menu__index">03</span>
+              </a>
+            </li>
+            <li>
+              <a class="mobile-menu__link" href="#pricing">
+                <span>Pricing</span>
+                <span class="mobile-menu__index">04</span>
+              </a>
+            </li>
+            <li>
+              <a class="mobile-menu__link" href="#faq">
+                <span>FAQ</span>
+                <span class="mobile-menu__index">05</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a class="btn btn--primary mobile-menu__cta" href="#contact">Get early access</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =====================================================================
+         2. Hero
+         ===================================================================== -->
+    <section class="hero" id="top" aria-labelledby="hero-heading">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">Portfolio concept · Studio operations</p>
+          <h1 class="hero__title" id="hero-heading">
+            The <em>quiet</em> operating system for independent studios.
+          </h1>
+          <p class="hero__lead">
+            LumenDesk keeps proposals, signed scope, client progress pages, and payment reminders in one calm workspace—built for independent developers and two- or three-person practices.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact">Request early access</a>
+            <a class="btn btn--secondary" href="#features">See how it works</a>
+          </div>
+
+          <div class="hero__meta" aria-label="Key product characteristics">
+            <div class="hero__stat">
+              <span class="hero__stat-label">Built for</span>
+              <span class="hero__stat-value">Solo &amp; 2–3 person studios</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-label">Client access</span>
+              <span class="hero__stat-value">Read-only link, zero logins</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-label">Cadence</span>
+              <span class="hero__stat-value">Async by default</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bespoke Product Workspace Schematic (Pure Inline SVG) -->
+        <figure class="hero__figure">
+          <div class="hero__frame">
+            <div class="hero__frame-bar" aria-hidden="true">
+              <span class="hero__frame-dots">
+                <span></span><span></span><span></span>
+              </span>
+              <span>workspace / engagements / LD-042</span>
+              <span>SYNCED</span>
+            </div>
+
+            <svg viewBox="0 0 640 448" width="640" height="448" role="img" aria-labelledby="hero-svg-title hero-svg-desc">
+              <title id="hero-svg-title">LumenDesk Studio Workspace schematic</title>
+              <desc id="hero-svg-desc">An interface diagram displaying engagement LD-042 for Alder Checkout Rebuild, showing locked scope version 1.2, 70 percent milestone completion, a Friday status update read by the client, and a three-part invoice ledger.</desc>
+
+              <!-- Background Canvas -->
+              <rect width="640" height="448" fill="#FAF7F1"/>
+
+              <!-- Left Sidebar -->
+              <rect x="0" y="0" width="160" height="448" fill="#F1EAE0"/>
+              <line x1="160" y1="0" x2="160" y2="448" stroke="#1A1916" stroke-opacity="0.14"/>
+
+              <text x="18" y="32" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.2">ENGAGEMENTS</text>
+
+              <!-- Active Engagement Pill -->
+              <rect x="12" y="44" width="136" height="42" rx="4" fill="#FAF7F1" stroke="#1F4A3A" stroke-width="1.2"/>
+              <rect x="12" y="44" width="4" height="42" rx="2" fill="#1F4A3A"/>
+              <text x="26" y="62" fill="#1A1916" font-family="IBM Plex Sans, sans-serif" font-size="11.5" font-weight="600">LD-042 · Alder</text>
+              <text x="26" y="77" fill="#1F4A3A" font-family="IBM Plex Mono, monospace" font-size="9">ACTIVE · 70%</text>
+
+              <!-- Other Engagements -->
+              <text x="24" y="112" fill="#4A463F" font-family="IBM Plex Sans, sans-serif" font-size="11">LD-041 · Kestrel</text>
+              <text x="24" y="126" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="9">PROPOSAL SENT</text>
+
+              <text x="24" y="156" fill="#4A463F" font-family="IBM Plex Sans, sans-serif" font-size="11">LD-039 · Bramble</text>
+              <text x="24" y="170" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="9">ARCHIVED</text>
+
+              <line x1="18" y1="194" x2="142" y2="194" stroke="#1A1916" stroke-opacity="0.12"/>
+
+              <!-- Sidebar Modules -->
+              <text x="18" y="218" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.2">LEDGER VIEWS</text>
+
+              <g font-family="IBM Plex Sans, sans-serif" font-size="11">
+                <rect x="12" y="230" width="136" height="28" rx="3" fill="#DDEAE4"/>
+                <text x="24" y="248" fill="#1F4A3A" font-weight="600">Overview</text>
+
+                <text x="24" y="278" fill="#4A463F">Scope Lock (v1.2)</text>
+                <text x="24" y="304" fill="#4A463F">Client Page</text>
+                <text x="24" y="330" fill="#4A463F">Friday Updates</text>
+                <text x="24" y="356" fill="#4A463F">Payment Schedule</text>
+              </g>
+
+              <!-- Quiet Status Footer in Sidebar -->
+              <rect x="14" y="394" width="132" height="38" rx="4" fill="#FAF7F1" stroke="#1A1916" stroke-opacity="0.14"/>
+              <circle cx="28" cy="413" r="4" fill="#1F4A3A"/>
+              <text x="39" y="410" fill="#1A1916" font-family="IBM Plex Mono, monospace" font-size="9">CLIENT LINK</text>
+              <text x="39" y="423" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="8.5">Viewed 2h ago</text>
+
+              <!-- Main Pane Header -->
+              <text x="186" y="34" fill="#8E4A27" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.2">FIXED-SCOPE BUILD · 6 WEEKS</text>
+              <text x="186" y="61" fill="#1A1916" font-family="Fraunces, Georgia, serif" font-size="22" font-weight="500">Alder Checkout Rebuild</text>
+
+              <!-- Scope Locked Badge -->
+              <rect x="504" y="38" width="112" height="26" rx="13" fill="#1F4A3A"/>
+              <text x="560" y="54.5" text-anchor="middle" fill="#FAF7F1" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="0.6">SCOPE LOCKED</text>
+
+              <line x1="186" y1="78" x2="616" y2="78" stroke="#1A1916" stroke-opacity="0.14"/>
+
+              <!-- Milestone Progress Bar -->
+              <text x="186" y="102" fill="#4A463F" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="0.9">DELIVERABLE PROGRESS</text>
+              <text x="616" y="102" text-anchor="end" fill="#1F4A3A" font-family="IBM Plex Mono, monospace" font-size="10.5" font-weight="500">70% · 4 OF 6 SIGNED</text>
+
+              <rect x="186" y="114" width="430" height="8" rx="4" fill="#E6DDD0"/>
+              <rect x="186" y="114" width="301" height="8" rx="4" fill="#1F4A3A"/>
+              <!-- Milestone ticks -->
+              <line x1="329" y1="111" x2="329" y2="125" stroke="#FAF7F1" stroke-width="2"/>
+              <line x1="472" y1="111" x2="472" y2="125" stroke="#FAF7F1" stroke-width="2"/>
+
+              <!-- Two-Column Mid Cards: Scope & Latest Update -->
+              <rect x="186" y="140" width="208" height="148" rx="4" fill="#F4EFE6" stroke="#1A1916" stroke-opacity="0.14"/>
+              <text x="200" y="162" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="1">SIGNED SCOPE · v1.2</text>
+              <line x1="200" y1="172" x2="380" y2="172" stroke="#1A1916" stroke-opacity="0.1"/>
+
+              <g font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#1A1916">
+                <circle cx="206" cy="192" r="5" fill="#1F4A3A"/>
+                <path d="M203.8 192 L205.4 193.7 L208.4 190.4" fill="none" stroke="#FAF7F1" stroke-width="1.3"/>
+                <text x="218" y="195.5">Cart &amp; address schema</text>
+
+                <circle cx="206" cy="218" r="5" fill="#1F4A3A"/>
+                <path d="M203.8 218 L205.4 219.7 L208.4 216.4" fill="none" stroke="#FAF7F1" stroke-width="1.3"/>
+                <text x="218" y="221.5">Stripe webhook idempotency</text>
+
+                <circle cx="206" cy="244" r="5" fill="none" stroke="#B5673E" stroke-width="1.8"/>
+                <circle cx="206" cy="244" r="2" fill="#B5673E"/>
+                <text x="218" y="247.5" font-weight="600">VAT invoice PDF export</text>
+
+                <circle cx="206" cy="270" r="5" fill="none" stroke="#625D54" stroke-width="1.2"/>
+                <text x="218" y="273.5" fill="#625D54">Launch cutover runbook</text>
+              </g>
+
+              <!-- Right Mid Card: Quiet Friday Digest -->
+              <rect x="408" y="140" width="208" height="148" rx="4" fill="#F4EFE6" stroke="#1A1916" stroke-opacity="0.14"/>
+              <text x="422" y="162" fill="#8E4A27" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="1">WEEKLY UPDATE · FRI</text>
+              <line x1="422" y1="172" x2="602" y2="172" stroke="#1A1916" stroke-opacity="0.1"/>
+              <text x="422" y="193" fill="#1A1916" font-family="IBM Plex Sans, sans-serif" font-size="11.5" font-weight="600">Week 4 staging ready</text>
+              <text x="422" y="211" fill="#4A463F" font-family="IBM Plex Sans, sans-serif" font-size="10.5">Tax rounding edge cases are</text>
+              <text x="422" y="226" fill="#4A463F" font-family="IBM Plex Sans, sans-serif" font-size="10.5">live on staging. One question</text>
+              <text x="422" y="241" fill="#4A463F" font-family="IBM Plex Sans, sans-serif" font-size="10.5">left on EU receipt wording.</text>
+
+              <rect x="422" y="256" width="124" height="20" rx="3" fill="#DDEAE4"/>
+              <text x="430" y="269.5" fill="#1F4A3A" font-family="IBM Plex Mono, monospace" font-size="8.5">READ BY M. BROOKS</text>
+
+              <!-- Bottom Invoice Ledger -->
+              <rect x="186" y="304" width="430" height="124" rx="4" fill="#FAF7F1" stroke="#1A1916" stroke-opacity="0.18"/>
+              <rect x="186" y="304" width="430" height="30" rx="4" fill="#EAE2D4"/>
+              <text x="200" y="323" fill="#1A1916" font-family="IBM Plex Mono, monospace" font-size="9.5" font-weight="500">PAYMENT SCHEDULE</text>
+              <text x="602" y="323" text-anchor="end" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="9">TOTAL £16,000</text>
+
+              <!-- Row 1 -->
+              <text x="200" y="354" fill="#1A1916" font-family="IBM Plex Sans, sans-serif" font-size="11">01 · Kickoff deposit (30%)</text>
+              <text x="470" y="354" text-anchor="end" fill="#1A1916" font-family="IBM Plex Mono, monospace" font-size="11">£4,800</text>
+              <rect x="520" y="341" width="82" height="19" rx="3" fill="#DDEAE4"/>
+              <text x="561" y="353.5" text-anchor="middle" fill="#1F4A3A" font-family="IBM Plex Mono, monospace" font-size="8.5">CLEARED</text>
+              <line x1="200" y1="366" x2="602" y2="366" stroke="#1A1916" stroke-opacity="0.09"/>
+
+              <!-- Row 2 -->
+              <text x="200" y="386" fill="#1A1916" font-family="IBM Plex Sans, sans-serif" font-size="11" font-weight="600">02 · Staging handoff (40%)</text>
+              <text x="470" y="386" text-anchor="end" fill="#1A1916" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500">£6,400</text>
+              <rect x="502" y="373" width="100" height="19" rx="3" fill="#F3E2D6" stroke="#B5673E" stroke-width="0.8"/>
+              <text x="552" y="385.5" text-anchor="middle" fill="#8E4A27" font-family="IBM Plex Mono, monospace" font-size="8.5">REMINDER TUE</text>
+              <line x1="200" y1="398" x2="602" y2="398" stroke="#1A1916" stroke-opacity="0.09"/>
+
+              <!-- Row 3 -->
+              <text x="200" y="417" fill="#625D54" font-family="IBM Plex Sans, sans-serif" font-size="11">03 · Production launch (30%)</text>
+              <text x="470" y="417" text-anchor="end" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="11">£4,800</text>
+              <text x="602" y="417" text-anchor="end" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="8.5">ON SIGN-OFF</text>
+            </svg>
+          </div>
+          <figcaption class="hero__caption">
+            <span>FIG. 01 — ENGAGEMENT LEDGER VIEW</span>
+            <span>ILLUSTRATIVE PORTFOLIO MOCKUP</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. Trust Strip (Fictional Studios — Pure Typographic Monograms)
+         ===================================================================== -->
+    <section class="trust-strip" aria-label="Fictional independent studios using LumenDesk">
+      <div class="container trust-strip__inner">
+        <p class="trust-strip__label">Shaped for practices like</p>
+        <ul class="trust-strip__list">
+          <li class="studio-mark">
+            <span class="studio-mark__mono" aria-hidden="true">AC</span>
+            <span class="studio-mark__name">Alder &amp; Co.</span>
+          </li>
+          <li class="studio-mark">
+            <span class="studio-mark__mono" aria-hidden="true">NL</span>
+            <span class="studio-mark__name">Northfield Lab</span>
+          </li>
+          <li class="studio-mark">
+            <span class="studio-mark__mono" aria-hidden="true">KW</span>
+            <span class="studio-mark__name">Kestrel Works</span>
+          </li>
+          <li class="studio-mark">
+            <span class="studio-mark__mono" aria-hidden="true">MP</span>
+            <span class="studio-mark__name">Meridian Press</span>
+          </li>
+          <li class="studio-mark">
+            <span class="studio-mark__mono" aria-hidden="true">BS</span>
+            <span class="studio-mark__name">Bramble Studio</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. Problem Statement
+         ===================================================================== -->
+    <section class="section" id="problem" aria-labelledby="problem-heading">
+      <div class="container">
+        <div class="section-header section-header--split">
+          <div>
+            <p class="eyebrow">01 · The quiet tax</p>
+            <h2 class="section-title" id="problem-heading">
+              Small studios rarely stall on code. They stall on <em>scattered context.</em>
+            </h2>
+          </div>
+          <p class="section-lead">
+            Between a signed PDF in email, quick Slack threads, a half-updated task board, and spreadsheets for invoices, half a day vanishes every week just proving what was agreed.
+          </p>
+        </div>
+
+        <div class="problem-layout">
+          <blockquote class="problem-quote">
+            <p>
+              “By week four of every client project, we spent more energy reconstructing what was in scope than shipping the actual work.”
+            </p>
+            <footer>— Composite studio note, 3-person engineering practice</footer>
+          </blockquote>
+
+          <ol class="problem-list">
+            <li class="problem-item">
+              <span class="problem-item__num">01</span>
+              <div>
+                <h3 class="problem-item__title">Scope drift hides in casual chat</h3>
+                <p class="problem-item__body">
+                  A client drops “one quick export button” into a Friday thread. Nobody wants to sound rigid, so it gets built quietly—until three weeks of unpaid extras erode the project margin.
+                </p>
+              </div>
+            </li>
+            <li class="problem-item">
+              <span class="problem-item__num">02</span>
+              <div>
+                <h3 class="problem-item__title">The Tuesday “just checking in” email</h3>
+                <p class="problem-item__body">
+                  Clients interrupt when they cannot see progress. Giving them a login to your internal issue tracker only creates more noise and awkward questions about unfinished branches.
+                </p>
+              </div>
+            </li>
+            <li class="problem-item">
+              <span class="problem-item__num">03</span>
+              <div>
+                <h3 class="problem-item__title">Status updates scattered across four tools</h3>
+                <p class="problem-item__body">
+                  Decisions live in email, prototypes sit in browser links, and approvals happen on calls with no written record. When someone asks why a feature shipped that way, everyone digs.
+                </p>
+              </div>
+            </li>
+            <li class="problem-item">
+              <span class="problem-item__num">04</span>
+              <div>
+                <h3 class="problem-item__title">Awkward manual invoice chasing</h3>
+                <p class="problem-item__body">
+                  Following up on an overdue milestone feels personal when you have to type the reminder yourself—so independent founders put it off and absorb the cash-flow gap.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. Features (Editorial Asymmetric Spreads — Distinct Visuals)
+         ===================================================================== -->
+    <section class="section section--tinted" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-header section-header--split">
+          <div>
+            <p class="eyebrow">02 · The workspace</p>
+            <h2 class="section-title" id="features-heading">
+              Four calm instruments, <em>one shared ledger.</em>
+            </h2>
+          </div>
+          <p class="section-lead">
+            Every engagement follows the same clean spine: agree on the work, publish a clear client page, write short Friday updates, and tie payment reminders to signed milestones.
+          </p>
+        </div>
+
+        <div class="feature-stack">
+          <!-- Feature 01: Wide Editorial Spread (Copy Left, SVG Right) -->
+          <article class="feature-spread" aria-labelledby="feat-scope-heading">
+            <div class="feature-spread__copy">
+              <span class="feature-index">01 · Proposals &amp; scope lock</span>
+              <h3 class="feature-spread__title" id="feat-scope-heading">
+                Turn an approved proposal into a locked scope record.
+              </h3>
+              <p class="feature-spread__body">
+                Draft clean, legible proposals with explicit deliverables, exclusions, and milestone dates. Once your client signs, the scope freezes into version 1.0—and any new request becomes a calm, priced change order rather than quiet creep.
+              </p>
+              <ul class="feature-points">
+                <li>Timestamped sign-off without heavy e-signature PDFs</li>
+                <li>Side-by-side change orders with cost and timeline impact</li>
+                <li>Explicit “not included” section kept visible for both sides</li>
+              </ul>
+            </div>
+
+            <div class="feature-spread__visual">
+              <div class="feature-visual-frame">
+                <svg viewBox="0 0 540 310" width="540" height="310" role="img" aria-labelledby="feat1-title">
+                  <title id="feat1-title">Diagram of Proposals and Scope Lock with a priced change-order gate</title>
+                  <rect width="540" height="310" fill="#FAF7F1"/>
+
+                  <!-- Left Column: Signed Baseline -->
+                  <rect x="14" y="14" width="256" height="282" rx="4" fill="#F4EFE6" stroke="#1A1916" stroke-opacity="0.18"/>
+                  <text x="30" y="40" fill="#1F4A3A" font-family="IBM Plex Mono, monospace" font-size="9.5" font-weight="500" letter-spacing="1">BASELINE · SIGNED 14 OCT</text>
+                  <line x1="30" y1="52" x2="254" y2="52" stroke="#1A1916" stroke-opacity="0.12"/>
+
+                  <text x="30" y="76" fill="#1A1916" font-family="Fraunces, Georgia, serif" font-size="16">Included deliverables</text>
+
+                  <g font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="#1A1916">
+                    <rect x="30" y="92" width="12" height="12" rx="2" fill="#1F4A3A"/>
+                    <path d="M33 98 L35.2 100.2 L39 95.8" fill="none" stroke="#FAF7F1" stroke-width="1.5"/>
+                    <text x="50" y="102">API integration &amp; retries</text>
+
+                    <rect x="30" y="122" width="12" height="12" rx="2" fill="#1F4A3A"/>
+                    <path d="M33 128 L35.2 130.2 L39 125.8" fill="none" stroke="#FAF7F1" stroke-width="1.5"/>
+                    <text x="50" y="132">Single-currency GBP tax</text>
+
+                    <rect x="30" y="152" width="12" height="12" rx="2" fill="#1F4A3A"/>
+                    <path d="M33 158 L35.2 160.2 L39 155.8" fill="none" stroke="#FAF7F1" stroke-width="1.5"/>
+                    <text x="50" y="162">Staging QA &amp; launch docs</text>
+                  </g>
+
+                  <line x1="30" y1="190" x2="254" y2="190" stroke="#1A1916" stroke-opacity="0.12"/>
+                  <text x="30" y="212" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="0.8">EXPLICITLY EXCLUDED</text>
+                  <text x="30" y="234" fill="#4A463F" font-family="IBM Plex Sans, sans-serif" font-size="11">– Multi-currency VAT rules</text>
+                  <text x="30" y="254" fill="#4A463F" font-family="IBM Plex Sans, sans-serif" font-size="11">– Legacy ERP migration</text>
+
+                  <text x="30" y="282" fill="#1F4A3A" font-family="IBM Plex Mono, monospace" font-size="9.5">HASH · 9F4A-LOCKED</text>
+
+                  <!-- Connector Arrow -->
+                  <path d="M270 148 L296 148" stroke="#B5673E" stroke-width="1.6" stroke-dasharray="3 3"/>
+                  <polygon points="296,143 304,148 296,153" fill="#B5673E"/>
+
+                  <!-- Right Column: Change Order Gate -->
+                  <rect x="304" y="44" width="222" height="222" rx="4" fill="#FAF7F1" stroke="#B5673E" stroke-width="1.5"/>
+                  <rect x="304" y="44" width="222" height="34" rx="4" fill="#F3E2D6"/>
+                  <text x="320" y="65" fill="#8E4A27" font-family="IBM Plex Mono, monospace" font-size="9.5" font-weight="500" letter-spacing="0.8">CHANGE ORDER · CO-01</text>
+
+                  <text x="320" y="102" fill="#1A1916" font-family="Fraunces, Georgia, serif" font-size="15.5">Multi-currency EU VAT</text>
+                  <text x="320" y="124" fill="#4A463F" font-family="IBM Plex Sans, sans-serif" font-size="11">Added after Week 3 review.</text>
+                  <text x="320" y="140" fill="#4A463F" font-family="IBM Plex Sans, sans-serif" font-size="11">Requires sign-off before build.</text>
+
+                  <line x1="320" y1="158" x2="510" y2="158" stroke="#1A1916" stroke-opacity="0.12"/>
+
+                  <text x="320" y="180" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="9">FEE DELTA</text>
+                  <text x="320" y="198" fill="#1A1916" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="500">+£1,400</text>
+
+                  <text x="424" y="180" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="9">SCHEDULE</text>
+                  <text x="424" y="198" fill="#1A1916" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="500">+4 days</text>
+
+                  <rect x="320" y="218" width="190" height="32" rx="4" fill="#1F4A3A"/>
+                  <text x="415" y="238" text-anchor="middle" fill="#FAF7F1" font-family="IBM Plex Sans, sans-serif" font-size="11" font-weight="500">Approve &amp; append to v1.3</text>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Feature 02: Reversed Spread (SVG Left, Copy Right) -->
+          <article class="feature-spread feature-spread--reversed" aria-labelledby="feat-client-heading">
+            <div class="feature-spread__copy">
+              <span class="feature-index">02 · Client progress page</span>
+              <h3 class="feature-spread__title" id="feat-client-heading">
+                One calm bookmark that replaces “quick check-in” emails.
+              </h3>
+              <p class="feature-spread__body">
+                Every project gets a tidy, shareable client page showing current phase, staging links, open decisions, and upcoming handoffs. Clients never have to remember a password or wade through your internal commit history.
+              </p>
+              <ul class="feature-points">
+                <li>Private tokenized URL—no client accounts or onboarding friction</li>
+                <li>Highlights decisions waiting on the client so dates stay realistic</li>
+                <li>Keeps links to staging, Figma, and signed docs in one margin</li>
+              </ul>
+            </div>
+
+            <div class="feature-spread__visual">
+              <div class="feature-visual-frame">
+                <svg viewBox="0 0 540 310" width="540" height="310" role="img" aria-labelledby="feat2-title">
+                  <title id="feat2-title">Diagram of a shareable read-only client progress page</title>
+                  <rect width="540" height="310" fill="#FAF7F1"/>
+
+                  <!-- Address Bar -->
+                  <rect x="14" y="14" width="512" height="32" rx="4" fill="#EAE2D4" stroke="#1A1916" stroke-opacity="0.14"/>
+                  <circle cx="30" cy="30" r="4.5" fill="#1F4A3A"/>
+                  <text x="44" y="34" fill="#4A463F" font-family="IBM Plex Mono, monospace" font-size="10">client.lumendesk.example / alder-042</text>
+                  <rect x="406" y="20" width="110" height="20" rx="10" fill="#FAF7F1"/>
+                  <text x="461" y="33.5" text-anchor="middle" fill="#1F4A3A" font-family="IBM Plex Mono, monospace" font-size="8.5">NO LOGIN NEEDED</text>
+
+                  <!-- Milestone Track -->
+                  <text x="24" y="76" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1">PHASE TRACK · WEEK 4 OF 6</text>
+
+                  <line x1="42" y1="106" x2="498" y2="106" stroke="#1A1916" stroke-opacity="0.16" stroke-width="2"/>
+                  <line x1="42" y1="106" x2="346" y2="106" stroke="#1F4A3A" stroke-width="2.5"/>
+
+                  <!-- 4 Phase Nodes -->
+                  <g font-family="IBM Plex Sans, sans-serif" font-size="10.5">
+                    <circle cx="42" cy="106" r="8" fill="#1F4A3A"/>
+                    <text x="42" y="130" text-anchor="middle" fill="#1A1916">01 Scope</text>
+
+                    <circle cx="194" cy="106" r="8" fill="#1F4A3A"/>
+                    <text x="194" y="130" text-anchor="middle" fill="#1A1916">02 Core API</text>
+
+                    <circle cx="346" cy="106" r="9" fill="#FAF7F1" stroke="#B5673E" stroke-width="2.5"/>
+                    <circle cx="346" cy="106" r="3.5" fill="#B5673E"/>
+                    <text x="346" y="130" text-anchor="middle" fill="#8E4A27" font-weight="600">03 Staging QA</text>
+
+                    <circle cx="498" cy="106" r="8" fill="#FAF7F1" stroke="#625D54" stroke-width="1.5"/>
+                    <text x="498" y="130" text-anchor="middle" fill="#625D54">04 Launch</text>
+                  </g>
+
+                  <!-- Two Info Blocks -->
+                  <rect x="24" y="156" width="240" height="134" rx="4" fill="#F4EFE6" stroke="#1A1916" stroke-opacity="0.14"/>
+                  <text x="38" y="178" fill="#8E4A27" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="0.9">NEEDS CLIENT DECISION</text>
+                  <text x="38" y="202" fill="#1A1916" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="600">Confirm EU invoice footer</text>
+                  <text x="38" y="220" fill="#4A463F" font-family="IBM Plex Sans, sans-serif" font-size="10.5">Needed by Wed 18 Nov to hold</text>
+                  <text x="38" y="236" fill="#4A463F" font-family="IBM Plex Sans, sans-serif" font-size="10.5">our 27 Nov launch window.</text>
+                  <rect x="38" y="252" width="128" height="24" rx="3" fill="#1F4A3A"/>
+                  <text x="102" y="268" text-anchor="middle" fill="#FAF7F1" font-family="IBM Plex Mono, monospace" font-size="9">LEAVE SIGN-OFF</text>
+
+                  <rect x="280" y="156" width="236" height="134" rx="4" fill="#F4EFE6" stroke="#1A1916" stroke-opacity="0.14"/>
+                  <text x="294" y="178" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="0.9">PINNED ARTIFACTS</text>
+                  <g font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#1A1916">
+                    <text x="294" y="204">↗ Staging build (v0.9.4)</text>
+                    <line x1="294" y1="216" x2="500" y2="216" stroke="#1A1916" stroke-opacity="0.1"/>
+                    <text x="294" y="237">↗ Signed Scope v1.2 (PDF)</text>
+                    <line x1="294" y1="249" x2="500" y2="249" stroke="#1A1916" stroke-opacity="0.1"/>
+                    <text x="294" y="270">↗ Test card credentials</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Features 03 & 04: Paired Architectural Folio separated by hairline -->
+          <div class="feature-pair">
+            <article class="feature-folio" aria-labelledby="feat-updates-heading">
+              <div>
+                <span class="feature-index">03 · Quiet status updates</span>
+                <h3 class="feature-folio__title" id="feat-updates-heading">
+                  A Friday rhythm clients actually read.
+                </h3>
+                <p class="feature-folio__body">
+                  Write a three-part note in five minutes—what shipped, what needs a decision, and what is next. LumenDesk archives it on the client page and sends one clean email digest with zero notification spam.
+                </p>
+              </div>
+
+              <div class="feature-visual-frame">
+                <svg viewBox="0 0 460 210" width="460" height="210" role="img" aria-labelledby="feat3-title">
+                  <title id="feat3-title">Diagram of a structured Friday status update digest</title>
+                  <rect width="460" height="210" fill="#FAF7F1"/>
+                  <rect x="12" y="12" width="436" height="186" rx="4" fill="#F4EFE6" stroke="#1A1916" stroke-opacity="0.16"/>
+
+                  <text x="28" y="38" fill="#1A1916" font-family="Fraunces, Georgia, serif" font-size="15">Friday Digest · Week 04</text>
+                  <rect x="318" y="22" width="114" height="22" rx="11" fill="#DDEAE4"/>
+                  <text x="375" y="36.5" text-anchor="middle" fill="#1F4A3A" font-family="IBM Plex Mono, monospace" font-size="8.5">SCHEDULED 16:00</text>
+                  <line x1="28" y1="52" x2="432" y2="52" stroke="#1A1916" stroke-opacity="0.12"/>
+
+                  <!-- 3 Digest Rows -->
+                  <rect x="28" y="66" width="84" height="22" rx="3" fill="#1F4A3A"/>
+                  <text x="70" y="80.5" text-anchor="middle" fill="#FAF7F1" font-family="IBM Plex Mono, monospace" font-size="8.5">SHIPPED</text>
+                  <text x="126" y="81" fill="#1A1916" font-family="IBM Plex Sans, sans-serif" font-size="11.5">Webhook retry queue &amp; tax tests</text>
+
+                  <rect x="28" y="106" width="84" height="22" rx="3" fill="#F3E2D6" stroke="#B5673E" stroke-width="0.9"/>
+                  <text x="70" y="120.5" text-anchor="middle" fill="#8E4A27" font-family="IBM Plex Mono, monospace" font-size="8.5">DECISION</text>
+                  <text x="126" y="121" fill="#1A1916" font-family="IBM Plex Sans, sans-serif" font-size="11.5">Approve EU VAT footer wording</text>
+
+                  <rect x="28" y="146" width="84" height="22" rx="3" fill="#EAE2D4"/>
+                  <text x="70" y="160.5" text-anchor="middle" fill="#4A463F" font-family="IBM Plex Mono, monospace" font-size="8.5">UP NEXT</text>
+                  <text x="126" y="161" fill="#4A463F" font-family="IBM Plex Sans, sans-serif" font-size="11.5">Staging walkthrough &amp; cutover</text>
+                </svg>
+              </div>
+            </article>
+
+            <article class="feature-folio" aria-labelledby="feat-payments-heading">
+              <div>
+                <span class="feature-index">04 · Payment reminders</span>
+                <h3 class="feature-folio__title" id="feat-payments-heading">
+                  Polite nudges tied to real milestones.
+                </h3>
+                <p class="feature-folio__body">
+                  When a milestone clears sign-off, LumenDesk prepares the invoice reminder on your schedule—sent in measured, plain English so you stay paid on time without ever writing an awkward follow-up email.
+                </p>
+              </div>
+
+              <div class="feature-visual-frame">
+                <svg viewBox="0 0 460 210" width="460" height="210" role="img" aria-labelledby="feat4-title">
+                  <title id="feat4-title">Diagram of milestone-triggered polite payment reminders</title>
+                  <rect width="460" height="210" fill="#FAF7F1"/>
+                  <rect x="12" y="12" width="436" height="186" rx="4" fill="#F4EFE6" stroke="#1A1916" stroke-opacity="0.16"/>
+
+                  <text x="28" y="38" fill="#1A1916" font-family="Fraunces, Georgia, serif" font-size="15">Invoice Cadence · INV-204</text>
+                  <text x="432" y="38" text-anchor="end" fill="#8E4A27" font-family="IBM Plex Mono, monospace" font-size="10.5" font-weight="500">£6,400 · NET 14</text>
+                  <line x1="28" y1="52" x2="432" y2="52" stroke="#1A1916" stroke-opacity="0.12"/>
+
+                  <!-- Timeline Chart -->
+                  <line x1="48" y1="104" x2="412" y2="104" stroke="#1A1916" stroke-opacity="0.18" stroke-width="2"/>
+                  <line x1="48" y1="104" x2="290" y2="104" stroke="#1F4A3A" stroke-width="2.5"/>
+
+                  <circle cx="48" cy="104" r="7" fill="#1F4A3A"/>
+                  <text x="48" y="84" text-anchor="middle" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="8.5">DAY 0</text>
+                  <text x="48" y="128" text-anchor="middle" fill="#1A1916" font-family="IBM Plex Sans, sans-serif" font-size="10">Issued</text>
+
+                  <circle cx="168" cy="104" r="7" fill="#1F4A3A"/>
+                  <text x="168" y="84" text-anchor="middle" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="8.5">DAY 11</text>
+                  <text x="168" y="128" text-anchor="middle" fill="#1A1916" font-family="IBM Plex Sans, sans-serif" font-size="10">Heads-up</text>
+
+                  <circle cx="290" cy="104" r="8" fill="#FAF7F1" stroke="#B5673E" stroke-width="2.5"/>
+                  <circle cx="290" cy="104" r="3" fill="#B5673E"/>
+                  <text x="290" y="84" text-anchor="middle" fill="#8E4A27" font-family="IBM Plex Mono, monospace" font-size="8.5" font-weight="500">DAY 14</text>
+                  <text x="290" y="128" text-anchor="middle" fill="#8E4A27" font-family="IBM Plex Sans, sans-serif" font-size="10" font-weight="600">Due note</text>
+
+                  <circle cx="412" cy="104" r="7" fill="#FAF7F1" stroke="#625D54" stroke-width="1.5"/>
+                  <text x="412" y="84" text-anchor="middle" fill="#625D54" font-family="IBM Plex Mono, monospace" font-size="8.5">DAY 21</text>
+                  <text x="412" y="128" text-anchor="middle" fill="#625D54" font-family="IBM Plex Sans, sans-serif" font-size="10">Follow-up</text>
+
+                  <!-- Footer note -->
+                  <rect x="28" y="152" width="404" height="30" rx="3" fill="#FAF7F1" stroke="#1A1916" stroke-opacity="0.1"/>
+                  <text x="40" y="171" fill="#4A463F" font-family="IBM Plex Mono, monospace" font-size="9">AUTO-PAUSES THE MOMENT BANK TRANSFER IS LOGGED</text>
+                </svg>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         6. How It Works (3 Steps)
+         ===================================================================== -->
+    <section class="section" id="how-it-works" aria-labelledby="steps-heading">
+      <div class="container">
+        <div class="section-header section-header--split">
+          <div>
+            <p class="eyebrow">03 · Workflow</p>
+            <h2 class="section-title" id="steps-heading">
+              Three steps from signed proposal to <em>final transfer.</em>
+            </h2>
+          </div>
+          <p class="section-lead">
+            No workspace setup marathon. Most studios import their first active engagement in under ten minutes.
+          </p>
+        </div>
+
+        <ol class="steps-grid">
+          <li class="step-item">
+            <span class="step-item__num" aria-hidden="true">01</span>
+            <h3 class="step-item__title">Lock the scope</h3>
+            <p class="step-item__body">
+              Write your deliverables, exclusions, and payment milestones in plain Markdown. Send a clean signing link—once approved, the baseline locks automatically.
+            </p>
+            <span class="step-item__meta">OUTPUT · SIGNED SCOPE v1.0</span>
+          </li>
+          <li class="step-item">
+            <span class="step-item__num" aria-hidden="true">02</span>
+            <h3 class="step-item__title">Share one calm link</h3>
+            <p class="step-item__body">
+              Hand your client a single bookmark for staging links, progress phases, and open questions. Publish a short Friday update straight from the same ledger.
+            </p>
+            <span class="step-item__meta">OUTPUT · READ-ONLY CLIENT PAGE</span>
+          </li>
+          <li class="step-item">
+            <span class="step-item__num" aria-hidden="true">03</span>
+            <h3 class="step-item__title">Ship &amp; collect on rhythm</h3>
+            <p class="step-item__body">
+              Mark a milestone complete and let LumenDesk issue polite, scheduled payment reminders tied directly to what was just approved.
+            </p>
+            <span class="step-item__meta">OUTPUT · PREDICTABLE CASH FLOW</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         7. Pricing (Three Tiers + Recommended + Portfolio Demo Note)
+         ===================================================================== -->
+    <section class="section section--tinted" id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="section-header section-header--split">
+          <div>
+            <p class="eyebrow">04 · Pricing</p>
+            <h2 class="section-title" id="pricing-heading">
+              Flat monthly pricing. <em>No per-client surcharges.</em>
+            </h2>
+          </div>
+          <p class="section-lead">
+            Predictable rates sized for independent practitioners and small studios. Invite as many client stakeholders to read-only progress pages as a project requires.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Tier 1: Starter -->
+          <article class="pricing-tier" aria-labelledby="tier-starter">
+            <div class="pricing-tier__head">
+              <h3 class="pricing-tier__name" id="tier-starter">Starter</h3>
+            </div>
+            <div class="pricing-tier__price-row">
+              <span class="pricing-tier__price">$19</span>
+              <span class="pricing-tier__period">/ month</span>
+            </div>
+            <p class="pricing-tier__desc">
+              For solo developers and independent consultants running 1–3 active client builds.
+            </p>
+            <ul class="pricing-tier__features">
+              <li>
+                <span class="pricing-tier__check" aria-hidden="true">✓</span>
+                <span>1 studio seat, up to 3 active engagements</span>
+              </li>
+              <li>
+                <span class="pricing-tier__check" aria-hidden="true">✓</span>
+                <span>Proposals, scope lock &amp; change-order ledger</span>
+              </li>
+              <li>
+                <span class="pricing-tier__check" aria-hidden="true">✓</span>
+                <span>Read-only client progress pages</span>
+              </li>
+              <li>
+                <span class="pricing-tier__check" aria-hidden="true">✓</span>
+                <span>Scheduled Friday status digests</span>
+              </li>
+            </ul>
+            <a class="btn btn--secondary pricing-tier__cta" href="#contact" data-plan-interest="Starter ($19/mo)">
+              Request Starter access
+            </a>
+          </article>
+
+          <!-- Tier 2: Studio (Recommended) -->
+          <article class="pricing-tier pricing-tier--featured" aria-labelledby="tier-studio">
+            <div class="pricing-tier__head">
+              <h3 class="pricing-tier__name" id="tier-studio">Studio</h3>
+              <span class="pricing-tier__badge">Recommended</span>
+            </div>
+            <div class="pricing-tier__price-row">
+              <span class="pricing-tier__price">$49</span>
+              <span class="pricing-tier__period">/ month</span>
+            </div>
+            <p class="pricing-tier__desc">
+              For 2–3 person studios juggling parallel retainers, fixed builds, and milestone billing.
+            </p>
+            <ul class="pricing-tier__features">
+              <li>
+                <span class="pricing-tier__check" aria-hidden="true">✓</span>
+                <span>Up to 4 studio seats &amp; unlimited active engagements</span>
+              </li>
+              <li>
+                <span class="pricing-tier__check" aria-hidden="true">✓</span>
+                <span>Everything in Starter plus custom client domain</span>
+              </li>
+              <li>
+                <span class="pricing-tier__check" aria-hidden="true">✓</span>
+                <span>Automated milestone payment reminders</span>
+              </li>
+              <li>
+                <span class="pricing-tier__check" aria-hidden="true">✓</span>
+                <span>Reusable proposal templates &amp; PDF exports</span>
+              </li>
+            </ul>
+            <a class="btn btn--primary pricing-tier__cta" href="#contact" data-plan-interest="Studio ($49/mo)">
+              Request Studio access
+            </a>
+          </article>
+
+          <!-- Tier 3: Office -->
+          <article class="pricing-tier" aria-labelledby="tier-office">
+            <div class="pricing-tier__head">
+              <h3 class="pricing-tier__name" id="tier-office">Office</h3>
+            </div>
+            <div class="pricing-tier__price-row">
+              <span class="pricing-tier__price">$99</span>
+              <span class="pricing-tier__period">/ month</span>
+            </div>
+            <p class="pricing-tier__desc">
+              For established boutique practices needing multi-currency ledgers and contractor views.
+            </p>
+            <ul class="pricing-tier__features">
+              <li>
+                <span class="pricing-tier__check" aria-hidden="true">✓</span>
+                <span>Up to 10 seats including associate contractors</span>
+              </li>
+              <li>
+                <span class="pricing-tier__check" aria-hidden="true">✓</span>
+                <span>Everything in Studio plus multi-currency ledgers</span>
+              </li>
+              <li>
+                <span class="pricing-tier__check" aria-hidden="true">✓</span>
+                <span>Accounting CSV export (Xero &amp; FreeAgent format)</span>
+              </li>
+              <li>
+                <span class="pricing-tier__check" aria-hidden="true">✓</span>
+                <span>Priority email support from the product team</span>
+              </li>
+            </ul>
+            <a class="btn btn--secondary pricing-tier__cta" href="#contact" data-plan-interest="Office ($99/mo)">
+              Request Office access
+            </a>
+          </article>
+        </div>
+
+        <div class="pricing-footnote">
+          <p>Portfolio demo — not a live checkout.</p>
+          <p>All figures shown in USD · Fictional product pricing</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         8. Testimonials (Grounded Fictional Studio Voices)
+         ===================================================================== -->
+    <section class="section" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">05 · Field notes</p>
+          <h2 class="section-title" id="testimonials-heading">
+            Quiet feedback from <em>small teams.</em>
+          </h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <figure class="testimonial">
+            <blockquote class="testimonial__quote">
+              “We cut our weekly client calls from four down to one. Clients bookmark the progress page and stop emailing every Tuesday to ask where staging stands.”
+            </blockquote>
+            <figcaption class="testimonial__author">
+              <cite class="testimonial__name">Hannah Gallagher</cite>
+              <span class="testimonial__role">Principal Engineer · Alder &amp; Co., Bristol</span>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <blockquote class="testimonial__quote">
+              “The change-order gate paid for itself in the first month. Saying ‘let me log that as CO-02’ feels neutral and fair instead of confrontational.”
+            </blockquote>
+            <figcaption class="testimonial__author">
+              <cite class="testimonial__name">David Okafor</cite>
+              <span class="testimonial__role">Co-founder · Northfield Lab, Chicago</span>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <blockquote class="testimonial__quote">
+              “I used to dread chasing late milestone payments. Having calm reminders go out automatically on day 14 keeps my relationship with clients completely intact.”
+            </blockquote>
+            <figcaption class="testimonial__author">
+              <cite class="testimonial__name">Claire Lindholm</cite>
+              <span class="testimonial__role">Independent Product Designer · Kestrel Works, Edinburgh</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         9. Product FAQ (Keyboard-Accessible Accordion)
+         ===================================================================== -->
+    <section class="section section--tinted" id="faq" aria-labelledby="faq-heading">
+      <div class="container faq-layout">
+        <div>
+          <p class="eyebrow">06 · Questions</p>
+          <h2 class="section-title" id="faq-heading">
+            Practical answers before you <em>switch tools.</em>
+          </h2>
+          <p class="section-lead" style="margin-top: 1rem;">
+            Use Tab, Enter, Space, or the Arrow keys to move through the questions.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-1"
+                aria-expanded="true"
+                aria-controls="faq-panel-1"
+              >
+                <span>Do my clients need to create an account to view progress?</span>
+                <span class="faq-trigger__icon" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1">
+              <p>
+                No. Each engagement generates a private, unguessable link you can optionally protect with a short passphrase. Clients can review milestones, read Friday updates, and approve change orders without registering another password.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-2"
+                aria-expanded="false"
+                aria-controls="faq-panel-2"
+              >
+                <span>Does LumenDesk replace GitHub Issues, Linear, or Jira?</span>
+                <span class="faq-trigger__icon" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" hidden>
+              <p>
+                No—and intentionally so. Your internal engineering tracker should remain messy and fast. LumenDesk sits one layer above it as the curated client-facing ledger for scope, milestones, weekly notes, and payment reminders.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-3"
+                aria-expanded="false"
+                aria-controls="faq-panel-3"
+              >
+                <span>How do payment reminders work if we invoice through Xero or Stripe?</span>
+                <span class="faq-trigger__icon" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" hidden>
+              <p>
+                Attach your existing invoice PDF or payment link to a LumenDesk milestone. LumenDesk handles the calm reminder schedule—pre-due heads-up, due-day note, and polite follow-up—and stops the moment you mark the invoice settled.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-4"
+                aria-expanded="false"
+                aria-controls="faq-panel-4"
+              >
+                <span>Can I export my proposals, updates, and ledgers if I leave?</span>
+                <span class="faq-trigger__icon" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" hidden>
+              <p>
+                Yes. Every engagement exports as a clean ZIP archive containing Markdown notes, signed scope PDFs, and CSV payment records—no lock-in formats or missing attachments.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-5"
+                aria-expanded="false"
+                aria-controls="faq-panel-5"
+              >
+                <span>Is LumenDesk a live commercial product?</span>
+                <span class="faq-trigger__icon" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5" hidden>
+              <p>
+                LumenDesk is a fictional SaaS product designed and built as a static front-end portfolio landing page. All studio names, quotes, and pricing tiers are illustrative, and the contact form below is wired to a placeholder <code>POST /api/contact</code> endpoint.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         10. Contact Form (Validated, Honest POST /api/contact Placeholder)
+         ===================================================================== -->
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-layout">
+        <div class="contact-aside">
+          <p class="eyebrow">07 · Early access</p>
+          <h2 class="section-title" id="contact-heading">
+            Tell us about your <em>studio workflow.</em>
+          </h2>
+          <p class="section-lead">
+            Leave a note with your team size and how you currently track scope and client updates. This form validates locally and posts JSON to <code>POST /api/contact</code>.
+          </p>
+
+          <ul class="contact-notes">
+            <li>
+              <span class="contact-notes__label">Integration endpoint</span>
+              <span class="contact-notes__value"><code>POST /api/contact</code> (JSON payload)</span>
+            </li>
+            <li>
+              <span class="contact-notes__label">Demo behavior</span>
+              <span class="contact-notes__value">Honest status notice when hosted statically without a backend</span>
+            </li>
+            <li>
+              <span class="contact-notes__label">Privacy</span>
+              <span class="contact-notes__value">No third-party form proxies or hidden tracking scripts</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-form-card">
+          <form id="contact-form" method="post" action="/api/contact" aria-describedby="plan-interest-hint">
+            <p class="form-endpoint-note" id="plan-interest-hint" style="margin-bottom: 1.25rem;">
+              Fields marked with * are required.
+            </p>
+
+            <div class="form-grid">
+              <div class="form-grid form-grid--two">
+                <div class="form-field">
+                  <label class="form-label" for="contact-name">
+                    <span>Name *</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    autocomplete="name"
+                    required
+                    aria-describedby="error-name"
+                    placeholder="Alex Mercer"
+                  >
+                  <span class="form-error" id="error-name" role="alert"></span>
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="contact-email">
+                    <span>Email *</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    aria-describedby="error-email"
+                    placeholder="alex@studio.example"
+                  >
+                  <span class="form-error" id="error-email" role="alert"></span>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="contact-company">
+                  <span>Studio or company</span>
+                  <span class="form-label__optional">Optional</span>
+                </label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="contact-company"
+                  name="company"
+                  autocomplete="organization"
+                  aria-describedby="error-company"
+                  placeholder="Alder &amp; Co."
+                >
+                <span class="form-error" id="error-company" role="alert"></span>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="contact-message">
+                  <span>Message *</span>
+                </label>
+                <textarea
+                  class="form-textarea"
+                  id="contact-message"
+                  name="message"
+                  rows="5"
+                  required
+                  minlength="20"
+                  aria-describedby="message-hint error-message"
+                  placeholder="Tell us about your team size, typical project length, and what slows client updates down."
+                ></textarea>
+                <div class="form-hint" id="message-hint">
+                  <span>Minimum 20 characters</span>
+                  <span id="message-count" aria-live="off">0 / 20 min characters</span>
+                </div>
+                <span class="form-error" id="error-message" role="alert"></span>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn--primary" id="contact-submit" disabled>
+                  Send early access note
+                </button>
+                <span class="form-endpoint-note">Submits JSON → <code>/api/contact</code></span>
+              </div>
+            </div>
+
+            <noscript>
+              <div class="form-status form-status--demo" role="status">
+                <strong>JavaScript required to submit</strong>
+                The submit button stays disabled when JavaScript is unavailable so your details are never appended to a page URL. Enable JavaScript to validate and send JSON to <code>POST /api/contact</code>.
+              </div>
+            </noscript>
+
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================================================================
+       11. Footer
+       ======================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <a class="brand" href="#top" aria-label="LumenDesk back to top">
+            <img class="brand__mark" src="./assets/favicon.svg" alt="" width="28" height="28">
+            <span class="brand__name">LumenDesk</span>
+          </a>
+          <p class="site-footer__tagline">
+            The quiet operating system for independent studios. Fictional product built for front-end portfolio presentation.
+          </p>
+        </div>
+
+        <div class="site-footer__nav-group">
+          <div>
+            <p class="site-footer__col-title">Navigation</p>
+            <ul class="site-footer__links">
+              <li><a href="#problem">Why it exists</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#how-it-works">How it works</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="site-footer__col-title">Legal (Demo)</p>
+            <ul class="site-footer__links">
+              <li><a href="#" aria-label="Privacy policy placeholder link">Privacy</a></li>
+              <li><a href="#" aria-label="Terms of service placeholder link">Terms</a></li>
+              <li><a href="#" aria-label="Security overview placeholder link">Security</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© 2026 LumenDesk. All rights reserved.</p>
+        <p>Static HTML, CSS &amp; JS · Portfolio showcase</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="LumenDesk — The quiet operating system for independent studios">
+  <defs>
+    <pattern id="paper-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1A1916" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Warm Ivory Paper Ground -->
+  <rect width="1200" height="630" fill="#F4EFE6"/>
+  <rect width="1200" height="630" fill="url(#paper-grid)"/>
+
+  <!-- Editorial Outer Frame -->
+  <rect x="36" y="36" width="1128" height="558" fill="none" stroke="#1A1916" stroke-opacity="0.18" stroke-width="1.5"/>
+  <line x1="36" y1="112" x2="1164" y2="112" stroke="#1A1916" stroke-opacity="0.14" stroke-width="1"/>
+  <line x1="740" y1="112" x2="740" y2="594" stroke="#1A1916" stroke-opacity="0.14" stroke-width="1"/>
+
+  <!-- Top Masthead Bar -->
+  <g transform="translate(68, 56)">
+    <rect x="0" y="0" width="36" height="36" rx="6" fill="#1F4A3A"/>
+    <path d="M12 10V25H26" fill="none" stroke="#F4EFE6" stroke-width="2.8" stroke-linecap="square"/>
+    <rect x="19" y="10" width="7" height="7" rx="1.2" fill="#B5673E"/>
+    <text x="50" y="25" fill="#1A1916" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="600">LumenDesk</text>
+  </g>
+  <text x="1130" y="80" text-anchor="end" fill="#524E46" font-family="'Courier New', monospace" font-size="14" letter-spacing="1.6">EDITION 01 · PORTFOLIO SHOWCASE</text>
+
+  <!-- Left Editorial Typography Column -->
+  <text x="68" y="180" fill="#8E4A27" font-family="'Courier New', monospace" font-size="15" font-weight="700" letter-spacing="2">STUDIO OPERATING LEDGER</text>
+  <text x="68" y="256" fill="#1A1916" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="600" letter-spacing="-1">The quiet</text>
+  <text x="68" y="324" fill="#1A1916" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="600" letter-spacing="-1">operating system</text>
+  <text x="68" y="392" fill="#1F4A3A" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-style="italic" font-weight="400" letter-spacing="-1">for small studios.</text>
+
+  <text x="68" y="458" fill="#524E46" font-family="system-ui, -apple-system, sans-serif" font-size="21">Proposals, scope sign-off, client progress pages,</text>
+  <text x="68" y="488" fill="#524E46" font-family="system-ui, -apple-system, sans-serif" font-size="21">and calm payment reminders in one workspace.</text>
+
+  <!-- Bottom Left Footnote -->
+  <line x1="68" y1="534" x2="680" y2="534" stroke="#1A1916" stroke-opacity="0.14" stroke-width="1"/>
+  <text x="68" y="564" fill="#524E46" font-family="'Courier New', monospace" font-size="14">BUILT FOR INDEPENDENT DEVELOPERS &amp; 2–3 PERSON STUDIOS</text>
+
+  <!-- Right Ledger Schematic Card -->
+  <g transform="translate(778, 152)">
+    <rect x="0" y="0" width="346" height="402" rx="6" fill="#FAF7F1" stroke="#1A1916" stroke-opacity="0.2" stroke-width="1.5"/>
+    <rect x="0" y="0" width="346" height="48" rx="6" fill="#ECE4D6"/>
+    <line x1="0" y1="48" x2="346" y2="48" stroke="#1A1916" stroke-opacity="0.14" stroke-width="1"/>
+    <text x="20" y="29" fill="#1A1916" font-family="'Courier New', monospace" font-size="13" font-weight="700">ENGAGEMENT · LD-042</text>
+    <rect x="242" y="13" width="84" height="22" rx="11" fill="#1F4A3A"/>
+    <text x="284" y="28" text-anchor="middle" fill="#FAF7F1" font-family="'Courier New', monospace" font-size="11">LOCKED</text>
+
+    <text x="20" y="84" fill="#1A1916" font-family="Georgia, serif" font-size="20" font-weight="600">Alder Checkout Rebuild</text>
+    <text x="20" y="106" fill="#524E46" font-family="system-ui, sans-serif" font-size="13">Fixed scope · 6 weeks · Signed 14 Oct</text>
+
+    <line x1="20" y1="126" x2="326" y2="126" stroke="#1A1916" stroke-opacity="0.12"/>
+
+    <!-- Milestone Bars -->
+    <text x="20" y="154" fill="#524E46" font-family="'Courier New', monospace" font-size="11" letter-spacing="1">MILESTONE PROGRESS</text>
+    <rect x="20" y="168" width="306" height="8" rx="4" fill="#E6DDD0"/>
+    <rect x="20" y="168" width="214" height="8" rx="4" fill="#1F4A3A"/>
+    <text x="326" y="154" text-anchor="end" fill="#1F4A3A" font-family="'Courier New', monospace" font-size="12" font-weight="700">70%</text>
+
+    <!-- Checklist Items -->
+    <g transform="translate(20, 200)">
+      <circle cx="8" cy="8" r="7" fill="#1F4A3A"/>
+      <path d="M5 8.2 L7.2 10.4 L11.5 6" fill="none" stroke="#FAF7F1" stroke-width="1.6" stroke-linecap="round"/>
+      <text x="26" y="12" fill="#1A1916" font-family="system-ui, sans-serif" font-size="14">01. Architecture &amp; Scope Sign-off</text>
+    </g>
+    <g transform="translate(20, 236)">
+      <circle cx="8" cy="8" r="7" fill="#1F4A3A"/>
+      <path d="M5 8.2 L7.2 10.4 L11.5 6" fill="none" stroke="#FAF7F1" stroke-width="1.6" stroke-linecap="round"/>
+      <text x="26" y="12" fill="#1A1916" font-family="system-ui, sans-serif" font-size="14">02. Checkout API &amp; Tax Engine</text>
+    </g>
+    <g transform="translate(20, 272)">
+      <circle cx="8" cy="8" r="7" fill="none" stroke="#B5673E" stroke-width="2"/>
+      <circle cx="8" cy="8" r="3" fill="#B5673E"/>
+      <text x="26" y="12" fill="#1A1916" font-family="system-ui, sans-serif" font-size="14" font-weight="600">03. Client QA &amp; Staging Review</text>
+    </g>
+
+    <line x1="20" y1="312" x2="326" y2="312" stroke="#1A1916" stroke-opacity="0.12"/>
+
+    <!-- Invoice Footer -->
+    <text x="20" y="340" fill="#524E46" font-family="'Courier New', monospace" font-size="11">NEXT SCHEDULED REMINDER</text>
+    <text x="20" y="366" fill="#1A1916" font-family="Georgia, serif" font-size="18" font-weight="600">Milestone 02 · £6,400</text>
+    <rect x="234" y="346" width="92" height="28" rx="4" fill="#F4E3D8" stroke="#B5673E" stroke-width="1"/>
+    <text x="280" y="364" text-anchor="middle" fill="#8E4A27" font-family="'Courier New', monospace" font-size="11" font-weight="700">DUE FRI</text>
+  </g>
+</svg>
